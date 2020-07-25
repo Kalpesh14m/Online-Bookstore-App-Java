@@ -1,0 +1,31 @@
+spring:
+  profiles: development
+  mail:
+    username: ${emailId}
+    password: ${emailPass}
+  rabbitmq:
+    username: ${rabbitUser}
+    password: ${rabbitPass}
+    
+url: jdbc:mysql://localhost:${port}/${dbName}? allowPublicKeyRetrieval=true&useSSL=false
+dbUserName: ${dbUser}
+dbPassword: ${dbPass}
+driverClassName: com.mysql.cj.jdbc.Driver
+  
+rmq:
+  rube:
+    exchange: ${exchange}
+    queue: ${queue}
+    routingkey: ${routingkey}
+
+amazonProperties:
+  endpointUrl: ${awsurl}
+  accessKey: ${accesskey}
+  secretKey: ${secretkey}
+  bucketName: ${bucketname}
+  bookBucketName: ${bookBucketName}
+  region: ${region}
+
+redis:
+  password: ${password}    
+  redisKey: ${key}

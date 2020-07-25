@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.datasource.dbPassword",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbPassword'"
+  },
+  {
+    "name": "spring.datasource.dbPassword",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbPassword'"
+  },
+  {
+    "name": "spring.datasource.dbUserName",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbUserName'"
+  }
+]}
