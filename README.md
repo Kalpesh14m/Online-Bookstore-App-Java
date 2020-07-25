@@ -8,21 +8,6 @@
 The **business-to-customer** aspect of **electronic commerce (_e-commerce_)** is the most visible business use of the ***World Wide Web***. The primary goal of an e-commerce site is to ***sell books*** and ***services online*** and the project deals with developing an e-commerce website for **Online Book Store**. It provides the user with a catalog of different books available for purchase in the store. In order to facilitate online purchase a shopping cart is provided to the user.
 
 
-
-
-
-### Development Team
-
-1. Arjun Chakraborty
-2. C Sai Kavya
-3. Chaithra BN
-4. Hemanth kumar r
-5. Pallavi Kumari
-6. Ramesh A
-7. Venkata Ganapathi k
-8. Vinod Kumar
-
-
 ### Overview of Online Book Store Application:
 
 - Online Book Store is an online web application where the _customer can purchase books online_. Through a web browser the customers can _search for a book_ by it's **title** or **author** or **cost**, later **can add to the shopping cart** and finally **purchase the books**. After purchasing the book, users can **give ratings** for that book.
@@ -129,33 +114,63 @@ If an item is not in stock, then we provide information that is **"Out of Stock"
 ![](https://user-images.githubusercontent.com/50637297/83981249-d6313300-a939-11ea-9de2-819b041d532b.jpg)
 
 
+### ENV variables:
+
+```
+profile=development
+
+emailId=mail
+emailPass=password
+
+rabbitPass=guest
+rabbitUser=guest
+exchange=obs-exchange
+queue=obs-queue
+routingkey=obs-routingkey
+
+port=3306
+dbName=dbName
+dbPass=root
+dbUser=root
+
+
+awsurl=url
+accesskey=accessKey
+secretkey=secretKey
+bookBucketName=bookstorebook
+bucketname=onlinebookstoreapp
+region=region
+password=password
+key=key
+
+forgot-password-template-path=TemplatePath
+login-template-path=TemplatePath
+registration-template-path=TemplatePath
+book-approval-template-path=TemplatePath
+book-deletion-template-path=TemplatePath
+book-rejection-template-path=TemplatePath
 ```
 
-profile = development
+### How to solve redis error:
 
-emailId = {Your_Email_ID}
-emailPass = {Your_Email_Password}
+```
+redis-server
+redis-cli ping
+redis-cli
+CONFIG SET requirepass password
+AUTH password 
+```
+### How to solve Elasticsearch error:
 
-rabbitUser = guest
-rabbitPass = guest
+```
+sudo systemctl start elasticsearch.service
+sudo systemctl stop elasticsearch.service
 
-port = {Your_DB_PORT}
-dbName = {Your_DB_Name
-dbUser = {Your_DB_User_Name}
-dbPass = {Your_DB_User_Password}
 
-exchange = obs-exchange
-queue = obs-queue
-routingkey = obs-routingkey
+drop table ReviewApp, address, book, cart, cart_book, hibernate_sequence, myorderlist, orders, orders_book, review,  wishlist, wishlist_has_books;
 
-accesskey = {Ask_To_Owner}
-endpointUrl = {Ask_To_Owner}
-bucketname = {Ask_To_Owner}
-secretkey = {Ask_To_Owner}
 
-registration-template-path = {In_Your_System_Templet_Path_For_Registration_Templet}
-login-template-path = {In_Your_System_Templet_Path_For_Login_Templet}
-forgot-password-template-path = {In_Your_System_Templet_Path_For_Forgot_Password_Templet}
+
 ```
 #### DFD for USER(DFD- Level 1)
 
